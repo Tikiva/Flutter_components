@@ -11,13 +11,35 @@ class Listview1Screen extends StatelessWidget {
         title:  const Text('Listview tipo 1'),
       ),
       body: ListView(
-         children: const [
-           Text('Hola mundo'),
-           Text('Hola mundo'),
-           Text('Hola mundo'),
-           Text('Hola mundo'),
+        //  children: const [
+        //    Text('Hola mundo'),
+        //    Text('Hola mundo'),
+        //    Text('Hola mundo'),
+        //    Text('Hola mundo'),
           
-         ],
+        //  ],
+        children: const [
+          ListTile(
+            leading: Icon(Icons.access_time_sharp),
+            title: Text('Hola'),
+          ),
+          ListTile(
+            leading: Icon(Icons.access_time_sharp),
+            title: Text('Hola'),
+          ),
+          ListTile(
+            leading: Icon(Icons.access_time_sharp),
+            title: Text('Hola'),
+          ),
+          ListTile(
+            leading: Icon(Icons.access_time_sharp),
+            title: Text('Hola'),
+          ),
+          ListTile(
+            leading: Icon(Icons.access_time_sharp),
+            title: Text('Hola'),
+          ),
+        ],
         
         )
       
