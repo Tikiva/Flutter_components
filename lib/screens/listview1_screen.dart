@@ -4,6 +4,8 @@ class Listview1Screen extends StatelessWidget {
    
   const Listview1Screen({Key? key}) : super(key: key);
   
+  final options= const ['Megaman','Metal Gear','Super smash','Final fantasy'];
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -18,27 +20,21 @@ class Listview1Screen extends StatelessWidget {
         //    Text('Hola mundo'),
           
         //  ],
-        children: const [
-          ListTile(
-            leading: Icon(Icons.access_time_sharp),
-            title: Text('Hola'),
-          ),
-          ListTile(
-            leading: Icon(Icons.access_time_sharp),
-            title: Text('Hola'),
-          ),
-          ListTile(
-            leading: Icon(Icons.access_time_sharp),
-            title: Text('Hola'),
-          ),
-          ListTile(
-            leading: Icon(Icons.access_time_sharp),
-            title: Text('Hola'),
-          ),
-          ListTile(
-            leading: Icon(Icons.access_time_sharp),
-            title: Text('Hola'),
-          ),
+        children:  [
+          ...options.map(
+            (game) => ListTile(
+              leading: const Icon(Icons.account_circle),
+              title:Text(game),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
+            )
+            ).toList(),
+
+            const Divider(),
+          
+          // ListTile(
+          //   leading: Icon(Icons.access_time_sharp),
+          //   title: Text('Hola'),
+          // ),
         ],
         
         )
