@@ -11,13 +11,19 @@ class Listview2Screen extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar( 
         title:  const Text('Listview tipo 2'),
+        elevation: 0,
+        backgroundColor: Colors.pinkAccent,
       ),
       body: ListView.separated(
         itemCount: options.length,
         itemBuilder: (context,item)=> ListTile(
-          leading: const Icon(Icons.account_circle),
+          leading: const Icon(Icons.account_circle,color:Colors.pinkAccent),
           title: Text(options[item]),
-          trailing: const Icon(Icons.arrow_forward_ios_outlined),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined,color: Colors.pinkAccent,),
+          onTap: (){
+            final game=options[item];
+            print(game);
+          },
           ), 
         
         separatorBuilder: (_,__)=> const Divider(), 
